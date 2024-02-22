@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="src/output.css" rel="stylesheet" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+      * {
+        font-family: Poppins;
+      }
+    </style>
+  </head>
+
+  <body class="bg-orange-100 dark:bg-stone-700 dark:text-white">
+    <h1 class="m-5 text-center text-3xl font-bold">Tic,Tac,Toe</h1>
+    <div class="flex justify-center">
+      <div class="grid grid-cols-3 gap-2 text-5xl font-extrabold text-white">
+        <button
+          class="gameButton h-20 w-20 rounded-md border border-green-300 bg-green-400 p-2"
+        ></button>
+        <button
+          class="gameButton h-20 w-20 rounded-md border border-green-300 bg-green-400 p-2"
+        ></button>
+        <button
+          class="gameButton h-20 w-20 rounded-md border border-green-300 bg-green-400 p-2"
+        ></button>
+        <button
+          class="gameButton h-20 w-20 rounded-md border border-green-300 bg-green-400 p-2"
+        ></button>
+        <button
+          class="gameButton h-20 w-20 rounded-md border border-green-300 bg-green-400 p-2"
+        ></button>
+        <button
+          class="gameButton h-20 w-20 rounded-md border border-green-300 bg-green-400 p-2"
+        ></button>
+        <button
+          class="gameButton h-20 w-20 rounded-md border border-green-300 bg-green-400 p-2"
+        ></button>
+        <button
+          class="gameButton h-20 w-20 rounded-md border border-green-300 bg-green-400 p-2"
+        ></button>
+        <button
+          class="gameButton h-20 w-20 rounded-md border border-green-300 bg-green-400 p-2"
+        ></button>
+      </div>
+    </div>
+
+    <div class="flex flex-col justify-center text-center font-semibold">
+      <div class="mt-5">
+        Last Winner:<span
+          id="winner"
+          class="rounded-xl border border-red-400 p-2"
+          >It's new Game, Baby!</span
+        >
+        <div class="m-3 h-10">
+          <button
+            class="newSessionButton rounded-3xl border border-green-300 bg-green-400 p-2 font-bold"
+            onclick="newSession(), updateScore()"
+          >
+            New Session
+          </button>
+        </div>
+      </div>
+      <div class="text-2xl font-bold">Score Board</div>
+      <div class="m-3">
+        Player(O):<span
+          id="scoreO"
+          class="rounded-full border border-red-400 p-2"
+          >BOL!</span
+        >::<span id="scoreKata" class="rounded-full border border-red-400 p-2"
+          >BOL!</span
+        >:Player(X)
+      </div>
+    </div>
+
+    <div class="flex justify-center">
+      <button
+        onclick="resetGame()"
+        class="rounded-md border border-red-300 bg-red-400 p-2 font-bold text-white"
+      >
+        Reset Game
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
